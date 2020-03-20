@@ -1,4 +1,9 @@
-# Botkit template
+# DevAsc Chat Assistant
+A bot designed to help users on the Cisco DevNet DevAsc Chat Room titled 'Program Questions'
+
+
+
+## Botkit template
 
 This project implements a Botkit + Webex Teams adapter bot, based on the [generator-botkit](https://www.npmjs.com/package/generator-botkit) Yoeman template, providing a few extra good-practice features, plus several interesting samples:
 
