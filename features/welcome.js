@@ -5,7 +5,7 @@ module.exports = function (controller) {
 
     controller.on( 'memberships.created', async( bot, message ) => {
 
-        let markDown = `#### **Welcome to DevNet!\
+        let markDown = `#### Welcome to DevNet!\
                         \n\n![alt text](https://github.com/xanderstevenson/botkit-template/blob/master/assets/images/CiscoDevNetSmall.png)
                         \n\n _**Self-Help**_ options for the _**DevNet Associate Fundamentals Course**_ (blue text = clickable link):\
                         \n --- \

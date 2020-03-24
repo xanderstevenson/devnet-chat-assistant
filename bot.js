@@ -171,8 +171,9 @@ controller.checkAddMention = function (roomType, command) {
     var botName = adapter.identity.displayName;
 
     if (roomType === 'group') {
-
-        return `\`@${botName} ${command}\``
+// altering to see if bot replies without being tagged
+        return `\`${command}\``
+        // return `\`@${botName} ${command}\``
     }
 
     return `\`${command}\``

@@ -31,7 +31,7 @@ module.exports = function(controller) {
     controller.hears('create','message,direct_message', async (bot, message) => {
 
         // create a room
-        let room = await bot.api.rooms.create({title: 'Botkit test room'});
+        let room = await bot.api.rooms.create({title: 'DevAsc Chat Assistant room'});
 
         // add user as member (bot is automatically added)
         let membership2 = await bot.api.memberships.create({
