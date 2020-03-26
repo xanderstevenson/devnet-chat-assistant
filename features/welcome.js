@@ -19,7 +19,7 @@ module.exports = function (controller) {
         if ( message.data.roomType == 'group' ) {
 
             markDown += `\n<u>Note</u>: this is a "group" space and I (the Bot) will answer only if mentioned!  \n`
-            markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '' ) } help`
+            markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '<u>help</u>' ) } `
         }
 //         console.log('memberships created', message);
         await bot.reply( message, { markdown : markDown} );
