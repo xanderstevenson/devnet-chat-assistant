@@ -35,7 +35,7 @@ module.exports = function (controller) {
     ], 'choseViableOption');
 
     convo.addMessage( {
-        text: 'You have chosen option {{ vars.choseViableOption }}.',
+        text: 'You have chosen option #{{ vars.choseViableOption }}.',
         action: 'complete'
     }, 'success' );
 
