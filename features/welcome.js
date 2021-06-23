@@ -1,7 +1,7 @@
 
 // import * as welcomeAttach from '/assets/cards/welcome-card';
 const { AttachmentLayoutTypes, CardFactory } = require('botbuilder');
-const AdaptiveCard = require('../assets/cards/welcomeCard.json');
+const AdaptiveCard = require('/assets/cards/welcomeCard.json');
 
 // Welcome message 
 // sent as the bot is added to a Room.
