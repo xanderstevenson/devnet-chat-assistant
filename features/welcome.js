@@ -1,5 +1,5 @@
 
-import * as welcomeAttach from '/assets/cards/welcome-card.js';
+import * as welcomeAttach from '/assets/cards/welcome-card';
 
 // Welcome message 
 // sent as the bot is added to a Room.
