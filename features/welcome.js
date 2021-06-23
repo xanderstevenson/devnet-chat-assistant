@@ -1,9 +1,15 @@
+
+import * as welcomeAttach from '/assets/cards/welcome-card.json';
+
 // Welcome message 
 // sent as the bot is added to a Room
 //
 module.exports = function (controller) {
 
     controller.on( 'memberships.created', async( bot, message ) => {
+
+        // If the bot created the space, don't do anything
+        if ( message.actorId == controller.adapter.identity.id ) return;
 
         let markDown = `#### Welcome to DevNet!\
                         \n\n![alt text](https://github.com/xanderstevenson/botkit-template/blob/master/assets/images/CiscoDevNetSmall.png)
@@ -22,6 +28,6 @@ module.exports = function (controller) {
             markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '<u>help</u>' ) } `
         }
 //         console.log('memberships created', message);
-        await bot.reply( message, { markdown : markDown} );
+        await bot.reply( message, {attachments: welcomeAttach}, {markdown : markDown} );
     });
 }
