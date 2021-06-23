@@ -1,5 +1,7 @@
 
-import * as welcomeAttach from '/assets/cards/welcome-card';
+// import * as welcomeAttach from '/assets/cards/welcome-card';
+const { AttachmentLayoutTypes, CardFactory } = require('botbuilder');
+const AdaptiveCard = require('../assets/cards/welcomeCard.json');
 
 // Welcome message 
 // sent as the bot is added to a Room.
@@ -22,14 +24,19 @@ module.exports = function (controller) {
                         \n`;
 
 
-        if ( message.data.roomType == 'group' ) {
+        // if ( message.data.roomType == 'group' ) {
 
-            markDown += `\n<u>Note</u>: this is a "group" space and I (the Bot) will answer only if mentioned!  \n`
-            markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '<u>help</u>' ) } `
+        //     markDown += `\n<u>Note</u>: this is a "group" space and I (the Bot) will answer only if mentioned!  \n`
+        //     markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '<u>help</u>' ) } `
+        // }
+        
+        createAdaptiveCard() {
+            return CardFactory.adaptiveCard(AdaptiveCard);
         }
+    
 //         console.log('memberships created', message);
 
 
-        await bot.reply( message, {attachments: welcomeAttach}, {markdown : markDown} );
+        await bot.reply( message, {markdown : markDown} );
     });
 }
