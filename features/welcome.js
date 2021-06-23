@@ -1,8 +1,8 @@
 
-import * as welcomeAttach from '/assets/cards/welcome-card.json';
+import * as welcomeAttach from '/assets/cards/welcome-card.js';
 
 // Welcome message 
-// sent as the bot is added to a Room
+// sent as the bot is added to a Room.
 //
 module.exports = function (controller) {
 
