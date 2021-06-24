@@ -24,17 +24,17 @@ module.exports = function (controller) {
                         \n`;
 
 
-        // if ( message.data.roomType == 'group' ) {
+        if ( message.data.roomType == 'group' ) {
 
-        //     markDown += `\n<u>Note</u>: this is a "group" space and I (the Bot) will answer only if mentioned!  \n`
-        //     markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '<u>help</u>' ) } `
-        // }
-        
-        createAdaptiveCard() {
-            return CardFactory.adaptiveCard(AdaptiveCard);
+            markDown += `\n<u>Note</u>: this is a "group" space and I (the Bot) will answer only if mentioned!  \n`
+            markDown += `For help, enter: ${ controller.checkAddMention( message.data.roomType, '\0<u>help</u>' ) } `
         }
+        
+        // createAdaptiveCard() {
+        //     return CardFactory.adaptiveCard(AdaptiveCard);
+        // }
     
-//         console.log('memberships created', message);
+        console.log('memberships created', message);
 
 
         await bot.reply( message, {markdown : markDown} );
