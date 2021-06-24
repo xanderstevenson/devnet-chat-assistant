@@ -15,7 +15,7 @@ module.exports = function (controller) {
         code: process.env.CODE
     }
 
-    controller.hears( 'what', 'message,direct_message', async ( bot, message ) => {
+    controller.hears( 'what?', 'message,direct_message', async ( bot, message ) => {
 
                 // Author a card
         // In practice you'll probably get this from a service
@@ -46,7 +46,7 @@ module.exports = function (controller) {
                 }
             ]
         };
-        await bot.reply( message, { attachments: card } );
+        await bot.reply( message, { "attachment": card } );
     });
 
     controller.commandHelp.push( { command: 'what', text: 'card testing' } );
