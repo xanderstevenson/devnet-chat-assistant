@@ -15,40 +15,40 @@ module.exports = function (controller) {
     //     code: process.env.CODE
     // }
 
-    controller.hears( 'what?', 'message,direct_message', async ( bot, message ) => {
+    controller.hears( 'yolo', 'message,direct_message', async ( bot, message ) => {
 
                 // Author a card
         // In practice you'll probably get this from a service
         // see http://adaptivecards.io/samples/ for inspiration
 
-        var card = {
-            "type": "AdaptiveCard",
-            "version": "1.0",
-            "body": [
-                {
-                    "type": "Image",
-                    "url": "http://adaptivecards.io/content/adaptive-card-50.png"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Hello **Adaptive Cards!**"
-                }
-            ],
-            "actions": [
-                {
-                    "type": "Action.OpenUrl",
-                    "title": "Learn more",
-                    "url": "http://adaptivecards.io"
-                },
-                {
-                    "type": "Action.OpenUrl",
-                    "title": "GitHub",
-                    "url": "http://github.com/Microsoft/AdaptiveCards"
-                }
-            ]
-        };
+        // var card = {
+        //     "type": "AdaptiveCard",
+        //     "version": "1.0",
+        //     "body": [
+        //         {
+        //             "type": "Image",
+        //             "url": "http://adaptivecards.io/content/adaptive-card-50.png"
+        //         },
+        //         {
+        //             "type": "TextBlock",
+        //             "text": "Hello **Adaptive Cards!**"
+        //         }
+        //     ],
+        //     "actions": [
+        //         {
+        //             "type": "Action.OpenUrl",
+        //             "title": "Learn more",
+        //             "url": "http://adaptivecards.io"
+        //         },
+        //         {
+        //             "type": "Action.OpenUrl",
+        //             "title": "GitHub",
+        //             "url": "http://github.com/Microsoft/AdaptiveCards"
+        //         }
+        //     ]
+        // };
 
-        await bot.reply( message, { markdown: 'test' }, { attachment: card } );
+        await bot.reply( message, { markdown: 'test' } );
     });
 
     controller.commandHelp.push( { command: 'what', text: 'card testing' } );
