@@ -2,6 +2,7 @@
 //
 // Respond to various 'hello' words, attach file by URL and from local file system
 var fs = require('fs');
+import * as wa3 from welcomeAdaptive3
 
 module.exports = function( controller ) {
 
@@ -25,6 +26,10 @@ module.exports = function( controller ) {
             files: [ fs.createReadStream( './bot.js' ) ]
         })
     })
+
+    controller.hears( 'smh', 'message,direct_message' , async ( bot,message ) => {
+        wa3()
+    })    
 
     controller.commandHelp.push( { command: 'hello', text: 'Greetings!' } );
     controller.commandHelp.push( { command: 'url', text: 'Attach a file via URL' } );
