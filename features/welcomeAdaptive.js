@@ -23,29 +23,160 @@ module.exports = function (controller) {
 
         var card = {
             "type": "AdaptiveCard",
-            "version": "1.0",
             "body": [
                 {
-                    "type": "Image",
-                    "url": "http://adaptivecards.io/content/adaptive-card-50.png"
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "style": "Person",
+                                    "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
+                                    "size": "Medium",
+                                    "height": "50px"
+                                }
+                            ],
+                            "width": "auto"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Cisco Webex",
+                                    "weight": "Lighter",
+                                    "color": "Accent"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "DevNet Chat Assistant",
+                                    "wrap": true,
+                                    "color": "Light",
+                                    "size": "Large",
+                                    "spacing": "Small"
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": 35,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Release Date:",
+                                    "color": "Light"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Product:",
+                                    "weight": "Lighter",
+                                    "color": "Light",
+                                    "spacing": "Small"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "OS:",
+                                    "weight": "Lighter",
+                                    "color": "Light",
+                                    "spacing": "Small"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 65,
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "TBD",
+                                    "color": "Light"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "DevNet Chat Assistant",
+                                    "color": "Light",
+                                    "weight": "Lighter",
+                                    "spacing": "Small"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Mac, Android, Windows, Web",
+                                    "weight": "Lighter",
+                                    "color": "Light",
+                                    "spacing": "Small"
+                                }
+                            ]
+                        }
+                    ],
+                    "spacing": "Padding",
+                    "horizontalAlignment": "Center"
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hello **Adaptive Cards!**"
-                }
-            ],
-            "actions": [
-                {
-                    "type": "Action.OpenUrl",
-                    "title": "Learn more",
-                    "url": "http://adaptivecards.io"
+                    "text": "Here is some filler text to explain what this bot will do to make your lives wonderful and stress-less. ",
+                    "wrap": true
                 },
                 {
-                    "type": "Action.OpenUrl",
-                    "title": "GitHub",
-                    "url": "http://github.com/Microsoft/AdaptiveCards"
+                    "type": "TextBlock",
+                    "text": "Buttons and Cards Resources:"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "altText": "",
+                                    "url": "https://developer.webex.com/images/link-icon.png",
+                                    "size": "Small",
+                                    "width": "30px"
+                                }
+                            ],
+                            "spacing": "Small"
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "[Developer Portal Buttons and Cards Guide]()",
+                                    "size": "Medium"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "spacing": "Small"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Subscribe to Release Notes",
+                            "data": {
+                                "subscribe": true
+                            }
+                        }
+                    ],
+                    "spacing": "None"
                 }
-            ]
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.2"
         };
 
         await bot.reply( message, 'Yolo' );
@@ -53,10 +184,6 @@ module.exports = function (controller) {
         await bot.reply( message, { attachments: card } );
     });
 
-    controller.on('attachmentActions', async (bot, message) => {
-        let markdown = "Thanks.  Received:  \n```\n" + JSON.stringify(message.value) + "\n```\n"
-        await bot.reply(message, { markdown: markdown });
-    });
 
 
     controller.commandHelp.push( { command: 'what', text: 'card testing' } );
