@@ -1,4 +1,4 @@
-var AdaptiveCard = require('/assets/cards/welcomeCard.json');
+// var AdaptiveCard = require('/assets/cards/welcomeCard.json');
 
 module.exports = function (controller) {
 
@@ -48,6 +48,7 @@ module.exports = function (controller) {
         //     ]
         // };
 
+        await bot.reply( message, 'Yolo' );
         await bot.reply( message, { markdown: 'test' } );
     });
 
