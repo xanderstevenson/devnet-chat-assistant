@@ -1,5 +1,4 @@
-// var AdaptiveCard = require('/assets/cards/welcomeCard.json');
-import * as AdaptiveCards from "adaptivecards";
+
 
 const card = {
     "type": "AdaptiveCard",
@@ -193,7 +192,7 @@ module.exports = function (controller) {
 
 
 // var AdaptiveCard = require('/assets/cards/welcomeCard.json');
-import * as AdaptiveCards from "adaptivecards";ls
+import * as AdaptiveCards from "adaptivecards";
 
 // Create an AdaptiveCard instance
 var adaptiveCard = new AdaptiveCards.AdaptiveCard();
