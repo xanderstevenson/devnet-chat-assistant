@@ -50,8 +50,14 @@ module.exports = function (controller) {
 
         await bot.reply( message, 'Yolo' );
         await bot.reply( message, { markdown: 'test' } );
-        await bot.reply( message, { attachment: card } );
+        await bot.reply( message, { attachments: card } );
     });
+
+    controller.on('attachmentActions', async (bot, message) => {
+        let markdown = "Thanks.  Received:  \n```\n" + JSON.stringify(message.value) + "\n```\n"
+        await bot.reply(message, { markdown: markdown });
+    });
+
 
     controller.commandHelp.push( { command: 'what', text: 'card testing' } );
 
