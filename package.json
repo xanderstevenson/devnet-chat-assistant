@@ -15,8 +15,14 @@
     "botbuilder-storage-redis": "^1.0.9",
     "botkit": "^4.6.2",
     "botkit-plugin-cms": "^1.0.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "ngrok": "^4.0.1",
+    "node": "^16.3.0",
     "redis": "^2.8.0",
-    "uuid": "^3.4.0"
+    "request-promise-native": "^1.0.9",
+    "require": "^2.4.20",
+    "uuid": "^3.4.0",
+    "webex": "^1.125.0"
   }
 }
