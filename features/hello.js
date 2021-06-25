@@ -27,12 +27,13 @@ module.exports = function( controller ) {
         })
     })
 
-    controller.hears( 'smh', 'message,direct_message' , async ( bot,message ) => {
-        wa3()
-    })    
+    // controller.hears( 'smh', 'message,direct_message' , async ( bot,message ) => {
+    //     wa3()
+    // })    
 
     controller.commandHelp.push( { command: 'hello', text: 'Greetings!' } );
     controller.commandHelp.push( { command: 'url', text: 'Attach a file via URL' } );
     controller.commandHelp.push( { command: 'local', text: 'Attach a file from the local file system' } );
+    // controller.commandHelp.push( { command: 'smh', text: 'shake my head' } );
 
 }
