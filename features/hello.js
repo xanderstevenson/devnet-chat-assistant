@@ -2,7 +2,7 @@
 //
 // Respond to various 'hello' words, attach file by URL and from local file system
 var fs = require('fs');
-import * as wa3 from welcomeAdaptive3
+// import * as wa3 from welcomeAdaptive3
 
 
 
