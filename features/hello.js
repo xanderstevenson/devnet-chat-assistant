@@ -4,6 +4,8 @@
 var fs = require('fs');
 import * as wa3 from welcomeAdaptive3
 
+
+
 module.exports = function( controller ) {
 
     controller.hears( [ 'hi','hello','howdy','hey','aloha','hola','bonjour','oi' ], 'message,direct_message', async ( bot,message ) => {
@@ -37,3 +39,6 @@ module.exports = function( controller ) {
     // controller.commandHelp.push( { command: 'smh', text: 'shake my head' } );
 
 }
+
+
+
