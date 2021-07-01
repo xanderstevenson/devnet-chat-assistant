@@ -35,14 +35,14 @@ module.exports = function (controller) {
                                     "type": "Column",
                                     "items": [{
                                             "type": "TextBlock",
-                                            "text": "Cisco Webex Teams",
+                                            "text": "Cisco Webex",
                                             "weight": "Lighter",
                                             "color": "Accent"
                                         },
                                         {
                                             "type": "TextBlock",
                                             "weight": "Bolder",
-                                            "text": `DevNet Chat Assistant`,
+                                            "text": "DevNet Chat Helper",
                                             "horizontalAlignment": "Left",
                                             "wrap": true,
                                             "color": "Light",
@@ -85,12 +85,12 @@ module.exports = function (controller) {
                                     "width": 65,
                                     "items": [{
                                             "type": "TextBlock",
-                                            "text": "Aug 6, 2019",
+                                            "text": "TBD",
                                             "color": "Light"
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Webex Teams",
+                                            "text": "DevNet Chat Helper for Webex",
                                             "color": "Light",
                                             "weight": "Lighter",
                                             "spacing": "Small"
