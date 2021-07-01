@@ -11,9 +11,12 @@ odict==1.7.0
 orderdict==2020.12.3
 plumber==1.6
 public==2020.12.3
+python-dateutil==2.8.1
 readme-md==2019.1.28
 requests==2.25.1
 setupcfg==2020.12.3
+six==1.16.0
+uglify==0.0.1
 urllib3==1.26.5
 values==2020.12.3
 write==2020.12.3
