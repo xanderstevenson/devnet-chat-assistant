@@ -18,7 +18,8 @@ module.exports = function(controller) {
                 'contentType': 'application/vnd.microsoft.card.adaptive',
                 'content': {
                     "type": "AdaptiveCard",
-                    'body': [{
+                    'body': [
+                        {
                             'type': 'ColumnSet',
                             'columns': [{
                                     'type': 'Column',
@@ -64,7 +65,6 @@ module.exports = function(controller) {
                         }
                     ],
                     '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json',
-
                     'actions': [{
                         'type': 'Action.Submit',
                         'title': 'Submit'
