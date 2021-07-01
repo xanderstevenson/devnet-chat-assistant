@@ -26,12 +26,12 @@ module.exports = function(controller) {
                                 'columns': [
                                     {
                                         'type': 'Column',
-                                        'width': 'stretch',
+                                        'width': 'auto',
                                         'items': [
                                             {
                                                 'type': 'TextBlock',
-                                                'text': 'VM Monitor',
-                                                'size': 'ExtraLarge',
+                                                'text': 'DevNet Chat Assistant',
+                                                'size': 'Large',
                                                 'weight': 'Bolder',
                                                 'horizontalAlignment': 'Center'
                                             }
@@ -40,7 +40,7 @@ module.exports = function(controller) {
                                     },
                                     {
                                         'type': 'Column',
-                                        'width': 'stretch',
+                                        'width': 'auto',
                                         'items': [
                                             {
                                                 'type': 'Image',
