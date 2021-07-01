@@ -168,8 +168,8 @@ module.exports = function(controller) {
 
 
     controller.commandHelp.push({
-        command: 'monitor',
-        text: 'Demo interactive adaptive cards'
+        command: 'cards',
+        text: 'Demo adaptive cards'
     });
 
 }
