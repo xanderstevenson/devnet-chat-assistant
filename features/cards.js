@@ -3,7 +3,7 @@
 //
 module.exports = function(controller) {
 
-    controller.hears( 'monitor', 'message,direct_message', async ( bot, message ) => {
+    controller.hears( 'cards', 'message,direct_message', async ( bot, message ) => {
 
         if (!controller.public_url) {
             await bot.reply( message, {
@@ -13,7 +13,7 @@ module.exports = function(controller) {
         }
 
         await bot.reply( message, {
-            text: 'VM Monitor',
+            text: 'DevNet Chat Assistant',
             attachments: [
                 {
                     'contentType': 'application/vnd.microsoft.card.adaptive',
@@ -45,7 +45,7 @@ module.exports = function(controller) {
                                             {
                                                 'type': 'Image',
                                                 'altText': '',
-                                                'url': `${controller.public_url}/www/monitor.png`
+                                                'url': `https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif`
                                             }
                                         ]
                                     }
@@ -151,6 +151,6 @@ module.exports = function(controller) {
         })
     })
 
-    controller.commandHelp.push( { command: 'monitor', text: 'Demo interactive adaptive cards' } );
+    controller.commandHelp.push( { command: 'cards', text: 'Demo adaptive cards' } );
 
 }
