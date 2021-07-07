@@ -18,36 +18,41 @@ module.exports = function (controller) {
                 'contentType': 'application/vnd.microsoft.card.adaptive',
                 'content': {
                     "type": "AdaptiveCard",
-                    "body": [{
+                    "body": [
+                        {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
-                                    "items": [{
-                                        "type": "Image",
-                                        "style": "Person",
-                                        "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
-                                        "size": "Medium",
-                                        "height": "50px"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "style": "Person",
+                                            "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
+                                            "size": "Medium",
+                                            "height": "50px"
+                                        }
+                                    ],
                                     "width": "auto"
                                 },
                                 {
                                     "type": "Column",
-                                    "items": [{
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
                                             "text": "Cisco Webex",
                                             "weight": "Lighter",
-                                            "color": "Accent"
+                                            "color": "Accent",
+                                            "size": "Medium"
                                         },
                                         {
                                             "type": "TextBlock",
                                             "weight": "Bolder",
                                             "text": "DevNet Chat Helper",
-                                            "horizontalAlignment": "Left",
                                             "wrap": true,
-                                            "color": "Light",
                                             "size": "Large",
-                                            "spacing": "Small"
+                                            "spacing": "Small",
+                                            "fontType": "Default"
                                         }
                                     ],
                                     "width": "stretch"
@@ -56,50 +61,50 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
-                                    "width": 35,
-                                    "items": [{
+                                    "width": 10,
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
-                                            "text": "Release Date:",
-                                            "color": "Light"
+                                            "text": "What:",
+                                            "color": "Good"
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Product:",
-                                            "weight": "Lighter",
-                                            "color": "Light",
-                                            "spacing": "Small"
+                                            "text": "Who:",
+                                            "spacing": "Small",
+                                            "color": "Good"
                                         },
                                         {
                                             "type": "TextBlock",
                                             "text": "OS:",
-                                            "weight": "Lighter",
-                                            "color": "Light",
-                                            "spacing": "Small"
+                                            "spacing": "Small",
+                                            "color": "Good"
                                         }
                                     ]
                                 },
                                 {
                                     "type": "Column",
                                     "width": 65,
-                                    "items": [{
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
-                                            "text": "TBD",
-                                            "color": "Light"
+                                            "color": "Light",
+                                            "text": "This bot is designed to help visitors & users with DevNet",
+                                            "maxLines": 1
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "DevNet Chat Helper for Webex",
-                                            "color": "Light",
+                                            "text": "Developed and maintained by Cisco DevNet DevX",
                                             "weight": "Lighter",
                                             "spacing": "Small"
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Mac, Windows, Web",
+                                            "text": "Mac, Windows, iOS, Android",
                                             "weight": "Lighter",
-                                            "color": "Light",
                                             "spacing": "Small"
                                         }
                                     ]
@@ -119,46 +124,49 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [{
-                                        "type": "Image",
-                                        "altText": "",
-                                        "url": "https://developer.webex.com/images/link-icon.png",
-                                        "size": "Small",
-                                        "width": "30px"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "https://developer.webex.com/images/link-icon.png",
+                                            "size": "Small",
+                                            "width": "30px"
+                                        }
+                                    ],
                                     "spacing": "Small"
                                 },
                                 {
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [{
-                                        "type": "TextBlock",
-                                        "text": "[Developer Portal Buttons and Cards Guide]()",
-                                        "horizontalAlignment": "Left",
-                                        "size": "Medium"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "[Developer Portal Buttons and Cards Guide]()",
+                                            "size": "Medium"
+                                        }
+                                    ],
                                     "verticalContentAlignment": "Center",
-                                    "horizontalAlignment": "Left",
                                     "spacing": "Small"
                                 }
                             ]
                         },
                         {
                             "type": "ActionSet",
-                            "actions": [{
-                                "type": "Action.Submit",
-                                "title": "Subscribe to Release Notes",
-                                "data": {
-                                    "subscribe": true
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Subscribe to Release Notes",
+                                    "data": {
+                                        "subscribe": true
+                                    }
                                 }
-                            }],
-                            "horizontalAlignment": "Left",
+                            ],
                             "spacing": "None"
                         }
-                    ],
+                    ],                
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
                     "version": "1.2",
                     'actions': [{
