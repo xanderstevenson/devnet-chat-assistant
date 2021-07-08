@@ -18,7 +18,7 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "version": "1.0",
+                    "version": "1.3",
                     "body": [{
                             "type": "ColumnSet",
                             "columns": [{
@@ -123,45 +123,21 @@ module.exports = function (controller) {
                             "spacing": "None"
                         },
                         {
-                            "type": "ColumnSet",
-                            "columns": [{
-                                    "type": "Column",
-                                    "width": "auto",
-                                    "items": [{
-                                        "type": "Image",
-                                        "url": "https://developer.webex.com/images/link-icon.png",
-                                        "size": "Small",
-                                        "width": "22px"
-                                    }],
-                                    "spacing": "Small",
-                                    "horizontalAlignment": "Center"
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "auto",
-                                    "verticalContentAlignment": "Center",
-                                    "spacing": "Small",
-                                    "items": [{
-                                        "type": "TextBlock",
-                                        "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
-                                        "wrap": true,
-                                        "fontType": "Default",
-                                        "size": "Medium"
-                                    }],
-                                    "horizontalAlignment": "Center"
-                                }
-                            ],
-                            "horizontalAlignment": "Center"
-                        },
-                        {
                             "type": "TextBlock",
                             "text": "for Mac, Windows, iOS, Android",
                             "wrap": true,
                             "separator": true,
                             "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
+                            "wrap": true,
+                            "horizontalAlignment": "Center"
                         }
                     ],
-                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                    "version": "1.3"
                 }
             }]
         })
