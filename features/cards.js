@@ -18,27 +18,22 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "body": [
-                        {
+                    "body": [{
                             "type": "ColumnSet",
-                            "columns": [
-                                {
+                            "columns": [{
                                     "type": "Column",
-                                    "items": [
-                                        {
-                                            "type": "Image",
-                                            "style": "Person",
-                                            "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
-                                            "size": "Medium",
-                                            "height": "50px"
-                                        }
-                                    ],
+                                    "items": [{
+                                        "type": "Image",
+                                        "style": "Person",
+                                        "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
+                                        "size": "Medium",
+                                        "height": "50px"
+                                    }],
                                     "width": "auto"
                                 },
                                 {
                                     "type": "Column",
-                                    "items": [
-                                        {
+                                    "items": [{
                                             "type": "TextBlock",
                                             "text": "Cisco Webex",
                                             "weight": "Lighter",
@@ -61,12 +56,10 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ColumnSet",
-                            "columns": [
-                                {
+                            "columns": [{
                                     "type": "Column",
                                     "width": 8,
-                                    "items": [
-                                        {
+                                    "items": [{
                                             "type": "TextBlock",
                                             "text": "What:",
                                             "color": "Good"
@@ -87,8 +80,7 @@ module.exports = function (controller) {
                                 },
                                 {
                                     "type": "Column",
-                                    "items": [
-                                        {
+                                    "items": [{
                                             "type": "TextBlock",
                                             "color": "Light",
                                             "text": "An interactive bot to help users with DevNet",
@@ -129,30 +121,25 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ColumnSet",
-                            "columns": [
-                                {
+                            "columns": [{
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [
-                                        {
-                                            "type": "Image",
-                                            "url": "https://developer.webex.com/images/link-icon.png",
-                                            "size": "Small",
-                                            "width": "30px"
-                                        }
-                                    ],
+                                    "items": [{
+                                        "type": "Image",
+                                        "url": "https://developer.webex.com/images/link-icon.png",
+                                        "size": "Small",
+                                        "width": "30px"
+                                    }],
                                     "spacing": "Small"
                                 },
                                 {
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "[Developer Portal Buttons and Cards Guide]()",
-                                            "size": "Medium"
-                                        }
-                                    ],
+                                    "items": [{
+                                        "type": "TextBlock",
+                                        "text": "[Developer Portal Buttons and Cards Guide]()",
+                                        "size": "Medium"
+                                    }],
                                     "verticalContentAlignment": "Center",
                                     "spacing": "Small"
                                 }
@@ -160,15 +147,13 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ActionSet",
-                            "actions": [
-                                {
-                                    "type": "Action.Submit",
-                                    "title": "Subscribe to Release Notes",
-                                    "data": {
-                                        "subscribe": true
-                                    }
+                            "actions": [{
+                                "type": "Action.Submit",
+                                "title": "Subscribe to Release Notes",
+                                "data": {
+                                    "subscribe": true
                                 }
-                            ],
+                            }],
                             "spacing": "None"
                         }
                     ],
