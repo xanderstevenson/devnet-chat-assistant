@@ -3,20 +3,20 @@
 //
 module.exports = function (controller) {
 
-    controller.hears('cards', 'message,direct_message', async (bot, message) => {
+    controller.hears("cards", "message,direct_message", async (bot, message) => {
 
         if (!controller.public_url) {
             await bot.reply(message, {
-                text: 'Please configure the PUBLIC_URL setting to enable this sample feature'
+                text: "Please configure the PUBLIC_URL setting to enable this sample feature"
             });
             return;
         }
 
         await bot.reply(message, {
-            text: 'DevNet Chat Assistant',
+            text: "DevNet Chat Assistant",
             attachments: [{
-                'contentType': 'application/vnd.microsoft.card.adaptive',
-                'content': {
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "content": {
                     "type": "AdaptiveCard",
                     "body": [{
                             "type": "ColumnSet",
@@ -37,17 +37,17 @@ module.exports = function (controller) {
                                             "type": "TextBlock",
                                             "text": "Cisco Webex",
                                             "weight": "Lighter",
-                                            "color": "Accent"
+                                            "color": "Accent",
+                                            "size": "Medium"
                                         },
                                         {
                                             "type": "TextBlock",
                                             "weight": "Bolder",
                                             "text": "DevNet Chat Helper",
-                                            "horizontalAlignment": "Left",
                                             "wrap": true,
-                                            "color": "Light",
                                             "size": "Large",
-                                            "spacing": "Small"
+                                            "spacing": "Small",
+                                            "fontType": "Default"
                                         }
                                     ],
                                     "width": "stretch"
@@ -58,25 +58,23 @@ module.exports = function (controller) {
                             "type": "ColumnSet",
                             "columns": [{
                                     "type": "Column",
-                                    "width": 35,
+                                    "width": 10,
                                     "items": [{
                                             "type": "TextBlock",
-                                            "text": "Release Date:",
-                                            "color": "Light"
+                                            "text": "What:",
+                                            "color": "Good"
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Product:",
-                                            "weight": "Lighter",
-                                            "color": "Light",
-                                            "spacing": "Small"
+                                            "text": "Who:",
+                                            "spacing": "Small",
+                                            "color": "Good"
                                         },
                                         {
                                             "type": "TextBlock",
                                             "text": "OS:",
-                                            "weight": "Lighter",
-                                            "color": "Light",
-                                            "spacing": "Small"
+                                            "spacing": "Small",
+                                            "color": "Good"
                                         }
                                     ]
                                 },
@@ -85,21 +83,20 @@ module.exports = function (controller) {
                                     "width": 65,
                                     "items": [{
                                             "type": "TextBlock",
-                                            "text": "TBD",
-                                            "color": "Light"
+                                            "color": "Light",
+                                            "text": "This bot is designed to help visitors & users with DevNet",
+                                            "maxLines": 1
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "DevNet Chat Helper for Webex",
-                                            "color": "Light",
+                                            "text": "Developed and maintained by Cisco DevNet DevX",
                                             "weight": "Lighter",
                                             "spacing": "Small"
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Mac, Windows, Web",
+                                            "text": "Mac, Windows, iOS, Android",
                                             "weight": "Lighter",
-                                            "color": "Light",
                                             "spacing": "Small"
                                         }
                                     ]
@@ -124,7 +121,6 @@ module.exports = function (controller) {
                                     "width": "auto",
                                     "items": [{
                                         "type": "Image",
-                                        "altText": "",
                                         "url": "https://developer.webex.com/images/link-icon.png",
                                         "size": "Small",
                                         "width": "30px"
@@ -137,11 +133,9 @@ module.exports = function (controller) {
                                     "items": [{
                                         "type": "TextBlock",
                                         "text": "[Developer Portal Buttons and Cards Guide]()",
-                                        "horizontalAlignment": "Left",
                                         "size": "Medium"
                                     }],
                                     "verticalContentAlignment": "Center",
-                                    "horizontalAlignment": "Left",
                                     "spacing": "Small"
                                 }
                             ]
@@ -155,83 +149,82 @@ module.exports = function (controller) {
                                     "subscribe": true
                                 }
                             }],
-                            "horizontalAlignment": "Left",
                             "spacing": "None"
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
                     "version": "1.2",
-                    'actions': [{
-                        'type': 'Action.Submit',
-                        'title': 'Submit'
+                    "actions": [{
+                        "type": "Action.Submit",
+                        "title": "Submit"
                     }]
                 }
             }]
         })
     })
 
-    controller.on('attachmentActions', async (bot, message) => {
+    controller.on("attachmentActions", async (bot, message) => {
 
         let hostName = message.value.vmlist;
 
         await bot.reply(message, {
-            text: 'Stats',
+            text: "Stats",
             attachments: [{
-                'contentType': 'application/vnd.microsoft.card.adaptive',
-                'content': {
-                    'type': 'AdaptiveCard',
-                    'version': '1.0',
-                    'body': [{
-                            'type': 'ColumnSet',
-                            'columns': [{
-                                    'type': 'Column',
-                                    'width': 'stretch',
-                                    'items': [{
-                                            'type': 'TextBlock',
-                                            'text': 'VM Monitor',
-                                            'size': 'ExtraLarge',
-                                            'weight': 'Bolder',
-                                            'horizontalAlignment': 'Center'
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "content": {
+                    "type": "AdaptiveCard",
+                    "version": "1.0",
+                    "body": [{
+                            "type": "ColumnSet",
+                            "columns": [{
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [{
+                                            "type": "TextBlock",
+                                            "text": "VM Monitor",
+                                            "size": "ExtraLarge",
+                                            "weight": "Bolder",
+                                            "horizontalAlignment": "Center"
                                         },
                                         {
-                                            'type': 'TextBlock',
-                                            'text': 'Data for Host:'
+                                            "type": "TextBlock",
+                                            "text": "Data for Host:"
                                         },
                                         {
-                                            'type': 'TextBlock',
-                                            'text': `${ hostName }`,
-                                            'weight': 'Bolder'
+                                            "type": "TextBlock",
+                                            "text": `${ hostName }`,
+                                            "weight": "Bolder"
                                         }
                                     ],
-                                    'verticalContentAlignment': 'Center',
-                                    'horizontalAlignment': 'Center'
+                                    "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Center"
                                 },
                                 {
-                                    'type': 'Column',
-                                    'width': 'stretch',
-                                    'items': [{
-                                        'type': 'Image',
-                                        'altText': '',
-                                        'url': `${controller.public_url}/www/monitor.png`
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [{
+                                        "type": "Image",
+                                        "altText": "",
+                                        "url": `${controller.public_url}/www/monitor.png`
                                     }]
                                 }
                             ]
                         },
                         {
-                            'type': 'Image',
-                            'altText': '',
-                            'url': `${controller.public_url}/www/stats.png`
+                            "type": "Image",
+                            "altText": "",
+                            "url": `${controller.public_url}/www/stats.png`
                         }
                     ],
-                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
                 }
             }]
         })
     })
 
     controller.commandHelp.push({
-        command: 'cards',
-        text: 'Demo adaptive cards'
+        command: "cards",
+        text: "Demo adaptive cards"
     });
 
 }
