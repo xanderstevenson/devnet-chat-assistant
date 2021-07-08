@@ -18,7 +18,7 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "version": '1.0',
+                    "version": "1.0",
                     "body": [{
                             "type": "ColumnSet",
                             "columns": [{
@@ -116,9 +116,15 @@ module.exports = function (controller) {
                             "text": "Buttons and Cards Resources:"
                         },
                         {
-                            "type": "TextBlock",
-                            "text": "New TextBlock",
-                            "wrap": true
+                            "type": "ActionSet",
+                            "actions": [{
+                                "type": "Action.Submit",
+                                "title": "Subscribe to Release Notes",
+                                "data": {
+                                    "subscribe": true
+                                }
+                            }],
+                            "spacing": "None"
                         },
                         {
                             "type": "ColumnSet",
@@ -129,33 +135,32 @@ module.exports = function (controller) {
                                         "type": "Image",
                                         "url": "https://developer.webex.com/images/link-icon.png",
                                         "size": "Small",
-                                        "width": "30px"
+                                        "width": "22px"
                                     }],
                                     "spacing": "Small"
                                 },
                                 {
                                     "type": "Column",
                                     "width": "auto",
+                                    "verticalContentAlignment": "Center",
+                                    "spacing": "Small",
                                     "items": [{
                                         "type": "TextBlock",
-                                        "text": "[Developer Portal Buttons and Cards Guide]()",
+                                        "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
+                                        "wrap": true,
+                                        "fontType": "Default",
                                         "size": "Medium"
-                                    }],
-                                    "verticalContentAlignment": "Center",
-                                    "spacing": "Small"
+                                    }]
                                 }
-                            ]
+                            ],
+                            "horizontalAlignment": "Center"
                         },
                         {
-                            "type": "ActionSet",
-                            "actions": [{
-                                "type": "Action.Submit",
-                                "title": "Subscribe to Release Notes",
-                                "data": {
-                                    "subscribe": true
-                                }
-                            }],
-                            "spacing": "None"
+                            "type": "TextBlock",
+                            "text": "for Mac, Windows, iOS, Android",
+                            "wrap": true,
+                            "separator": true,
+                            "horizontalAlignment": "Center"
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
