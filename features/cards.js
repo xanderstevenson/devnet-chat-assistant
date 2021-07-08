@@ -143,6 +143,7 @@ module.exports = function (controller) {
                                     "type": "Column",
                                     "width": "auto",
                                     "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Center",
                                     "spacing": "Small",
                                     "items": [{
                                         "type": "TextBlock",
@@ -152,9 +153,7 @@ module.exports = function (controller) {
                                         "size": "Medium"
                                     }]
                                 }
-                            ],
-                            "horizontalAlignment": "Center"
-                        },
+                            ],                        },
                         {
                             "type": "TextBlock",
                             "text": "for Mac, Windows, iOS, Android",
