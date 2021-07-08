@@ -18,22 +18,27 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "body": [{
+                    "body": [
+                        {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
-                                    "items": [{
-                                        "type": "Image",
-                                        "style": "Person",
-                                        "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
-                                        "size": "Medium",
-                                        "height": "50px"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "style": "Person",
+                                            "url": "https://static.wixstatic.com/media/3a60df_ba60095194a041f0b2ae04cfbae19e5c~mv2.gif",
+                                            "size": "Medium",
+                                            "height": "50px"
+                                        }
+                                    ],
                                     "width": "auto"
                                 },
                                 {
                                     "type": "Column",
-                                    "items": [{
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
                                             "text": "Cisco Webex",
                                             "weight": "Lighter",
@@ -43,7 +48,7 @@ module.exports = function (controller) {
                                         {
                                             "type": "TextBlock",
                                             "weight": "Bolder",
-                                            "text": "DevNet Chat Helper",
+                                            "text": "DevNet Support Cyborg",
                                             "wrap": true,
                                             "size": "Large",
                                             "spacing": "Small",
@@ -56,10 +61,12 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
-                                    "width": 10,
-                                    "items": [{
+                                    "width": 8,
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
                                             "text": "What:",
                                             "color": "Good"
@@ -80,16 +87,16 @@ module.exports = function (controller) {
                                 },
                                 {
                                     "type": "Column",
-                                    "width": 65,
-                                    "items": [{
+                                    "items": [
+                                        {
                                             "type": "TextBlock",
                                             "color": "Light",
-                                            "text": "This bot is designed to help visitors & users with DevNet",
+                                            "text": "An interactive bot to help users with DevNet",
                                             "maxLines": 1
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Developed and maintained by Cisco DevNet DevX",
+                                            "text": "Maintained by Cisco DevNet DevX Support",
                                             "weight": "Lighter",
                                             "spacing": "Small"
                                         },
@@ -99,7 +106,8 @@ module.exports = function (controller) {
                                             "weight": "Lighter",
                                             "spacing": "Small"
                                         }
-                                    ]
+                                    ],
+                                    "width": 75
                                 }
                             ],
                             "spacing": "Padding",
@@ -115,26 +123,36 @@ module.exports = function (controller) {
                             "text": "Buttons and Cards Resources:"
                         },
                         {
+                            "type": "TextBlock",
+                            "text": "New TextBlock",
+                            "wrap": true
+                        },
+                        {
                             "type": "ColumnSet",
-                            "columns": [{
+                            "columns": [
+                                {
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [{
-                                        "type": "Image",
-                                        "url": "https://developer.webex.com/images/link-icon.png",
-                                        "size": "Small",
-                                        "width": "30px"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "https://developer.webex.com/images/link-icon.png",
+                                            "size": "Small",
+                                            "width": "30px"
+                                        }
+                                    ],
                                     "spacing": "Small"
                                 },
                                 {
                                     "type": "Column",
                                     "width": "auto",
-                                    "items": [{
-                                        "type": "TextBlock",
-                                        "text": "[Developer Portal Buttons and Cards Guide]()",
-                                        "size": "Medium"
-                                    }],
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "[Developer Portal Buttons and Cards Guide]()",
+                                            "size": "Medium"
+                                        }
+                                    ],
                                     "verticalContentAlignment": "Center",
                                     "spacing": "Small"
                                 }
@@ -142,78 +160,16 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "ActionSet",
-                            "actions": [{
-                                "type": "Action.Submit",
-                                "title": "Subscribe to Release Notes",
-                                "data": {
-                                    "subscribe": true
-                                }
-                            }],
-                            "spacing": "None"
-                        }
-                    ],
-                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                    "version": "1.2",
-                    "actions": [{
-                        "type": "Action.Submit",
-                        "title": "Submit"
-                    }]
-                }
-            }]
-        })
-    })
-
-    controller.on("attachmentActions", async (bot, message) => {
-
-        let hostName = message.value.vmlist;
-
-        await bot.reply(message, {
-            text: "Stats",
-            attachments: [{
-                "contentType": "application/vnd.microsoft.card.adaptive",
-                "content": {
-                    "type": "AdaptiveCard",
-                    "version": "1.0",
-                    "body": [{
-                            "type": "ColumnSet",
-                            "columns": [{
-                                    "type": "Column",
-                                    "width": "stretch",
-                                    "items": [{
-                                            "type": "TextBlock",
-                                            "text": "VM Monitor",
-                                            "size": "ExtraLarge",
-                                            "weight": "Bolder",
-                                            "horizontalAlignment": "Center"
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Data for Host:"
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": `${ hostName }`,
-                                            "weight": "Bolder"
-                                        }
-                                    ],
-                                    "verticalContentAlignment": "Center",
-                                    "horizontalAlignment": "Center"
-                                },
+                            "actions": [
                                 {
-                                    "type": "Column",
-                                    "width": "stretch",
-                                    "items": [{
-                                        "type": "Image",
-                                        "altText": "",
-                                        "url": `${controller.public_url}/www/monitor.png`
-                                    }]
+                                    "type": "Action.Submit",
+                                    "title": "Subscribe to Release Notes",
+                                    "data": {
+                                        "subscribe": true
+                                    }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "Image",
-                            "altText": "",
-                            "url": `${controller.public_url}/www/stats.png`
+                            ],
+                            "spacing": "None"
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
