@@ -18,7 +18,7 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "version": '1.3',
+                    "version": '1.0',
                     "body": [{
                             "type": "ColumnSet",
                             "columns": [{
