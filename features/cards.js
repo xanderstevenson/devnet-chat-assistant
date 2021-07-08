@@ -112,10 +112,6 @@ module.exports = function (controller) {
                             "wrap": true
                         },
                         {
-                            "type": "TextBlock",
-                            "text": "Buttons and Cards Resources:"
-                        },
-                        {
                             "type": "ActionSet",
                             "actions": [{
                                 "type": "Action.Submit",
@@ -137,13 +133,13 @@ module.exports = function (controller) {
                                         "size": "Small",
                                         "width": "22px"
                                     }],
-                                    "spacing": "Small"
+                                    "spacing": "Small",
+                                    "horizontalAlignment": "Center"
                                 },
                                 {
                                     "type": "Column",
                                     "width": "auto",
                                     "verticalContentAlignment": "Center",
-                                    "horizontalAlignment": "Center",
                                     "spacing": "Small",
                                     "items": [{
                                         "type": "TextBlock",
@@ -151,9 +147,12 @@ module.exports = function (controller) {
                                         "wrap": true,
                                         "fontType": "Default",
                                         "size": "Medium"
-                                    }]
+                                    }],
+                                    "horizontalAlignment": "Center"
                                 }
-                            ],                        },
+                            ],
+                            "horizontalAlignment": "Center"
+                        },
                         {
                             "type": "TextBlock",
                             "text": "for Mac, Windows, iOS, Android",
