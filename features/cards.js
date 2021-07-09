@@ -48,7 +48,8 @@ module.exports = function (controller) {
                                             "wrap": true,
                                             "size": "Large",
                                             "spacing": "Small",
-                                            "fontType": "Default"
+                                            "fontType": "Default",
+                                            "color": "Light"
                                         }
                                     ],
                                     "width": "stretch"
@@ -89,7 +90,7 @@ module.exports = function (controller) {
                                         },
                                         {
                                             "type": "TextBlock",
-                                            "text": "Maintained by Cisco DevNet DevX Support",
+                                            "text": "Maintained by DevNet Developer Experience",
                                             "weight": "Lighter",
                                             "spacing": "Small"
                                         },
@@ -108,20 +109,26 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "TextBlock",
-                            "text": "We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.",
-                            "wrap": true
+                            "wrap": true,
+                            "text": "[Frequently Asked Questions](https://devnetsupport.cisco.com/hc/en-us/articles/4403440535187) ",
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "weight": "Bolder",
+                            "isSubtle": true,
+                            "separator": true,
+                            "spacing": "Medium"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
+                            "wrap": true,
+                            "horizontalAlignment": "Center"
                         },
                         {
                             "type": "TextBlock",
                             "text": "for Mac, Windows, iOS, Android",
                             "wrap": true,
                             "separator": true,
-                            "horizontalAlignment": "Center"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
-                            "wrap": true,
                             "horizontalAlignment": "Center"
                         }
                     ],
