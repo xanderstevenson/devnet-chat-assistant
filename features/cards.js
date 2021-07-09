@@ -18,7 +18,7 @@ module.exports = function (controller) {
                 "contentType": "application/vnd.microsoft.card.adaptive",
                 "content": {
                     "type": "AdaptiveCard",
-                    "version": "1.3",
+                    "version": "1.0",
                     "body": [{
                             "type": "ColumnSet",
                             "columns": [{
@@ -137,7 +137,7 @@ module.exports = function (controller) {
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                    "version": "1.3"
+                    "version": "1.0"
                 }
             }]
         })
