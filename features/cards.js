@@ -59,7 +59,7 @@ module.exports = function (controller) {
                             "type": "ColumnSet",
                             "columns": [{
                                     "type": "Column",
-                                    "width": 8,
+                                    "width": 12,
                                     "items": [{
                                             "type": "TextBlock",
                                             "text": "What:",
@@ -110,17 +110,6 @@ module.exports = function (controller) {
                             "type": "TextBlock",
                             "text": "We're making it easier for you to interact with bots and integrations in Webex Teams. When your bot sends information in a space that includes a card with buttons, you can now easily interact with it.",
                             "wrap": true
-                        },
-                        {
-                            "type": "ActionSet",
-                            "actions": [{
-                                "type": "Action.Submit",
-                                "title": "Subscribe to Release Notes",
-                                "data": {
-                                    "subscribe": true
-                                }
-                            }],
-                            "spacing": "None"
                         },
                         {
                             "type": "TextBlock",
