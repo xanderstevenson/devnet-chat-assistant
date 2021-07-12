@@ -110,13 +110,52 @@ module.exports = function (controller) {
                         {
                             "type": "TextBlock",
                             "wrap": true,
+                            "separator": true,
+                            "spacing": "Medium",
+                            "text": "What would you like to learn about today? ",
+                            "horizontalAlignment": "Center",
+                            "size": "Medium",
+                            "color": "Dark",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [{
+                                    "title": "Start Now - for beginners to coding and development",
+                                    "value": "Choice 1"
+                                },
+                                {
+                                    "title": "Learning Labs",
+                                    "value": "Choice 2"
+                                },
+                                {
+                                    "title": "Sandbox Labs",
+                                    "value": "Choice 3"
+                                },
+                                {
+                                    "title": "Code Exchange",
+                                    "value": "Choice 4"
+                                },
+                                {
+                                    "title": "Automation Exchange",
+                                    "value": "Choice 5"
+                                }
+                            ],
+                            "placeholder": "Make a choice",
+                            "style": "expanded",
+                            "spacing": "Medium",
+                            "value": "Start Now"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "wrap": true,
                             "text": "[Frequently Asked Questions](https://devnetsupport.cisco.com/hc/en-us/articles/4403440535187) ",
                             "horizontalAlignment": "Center",
                             "size": "Medium",
                             "weight": "Bolder",
-                            "isSubtle": true,
                             "separator": true,
-                            "spacing": "Medium"
+                            "spacing": "Medium",
+                            "isSubtle": true
                         },
                         {
                             "type": "TextBlock",
@@ -133,13 +172,9 @@ module.exports = function (controller) {
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                    "version": "1.0",
-                    "actions": [
-                        {
-                            "type": "Action.Submit",
-                            "title": "Submit"
-                        }
-                    ]
+                    "backgroundImage": {
+                        "url": "http://www.hdwallpaperspulse.com/wp-content/uploads/2016/03/10/abstract-free-background-hd.jpeg"
+                    }
                 }
             }]
         })
