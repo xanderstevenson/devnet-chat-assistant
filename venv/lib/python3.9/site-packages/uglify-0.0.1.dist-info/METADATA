@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: uglify
+Version: 0.0.1
+Summary: Helper for python package uglifying and packaging.
+Home-page: https://www.malongtech.com
+Author: weijiang
+Author-email: weijiang.xu@malongtech.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: python-dateutil
+
+Helper for python package uglifying and packaging.
+
+
