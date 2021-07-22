@@ -44,7 +44,7 @@ module.exports = function (controller) {
                                         {
                                             "type": "TextBlock",
                                             "weight": "Bolder",
-                                            "text": "DevNet Support Cyborg",
+                                            "text": "DevNet Support Helper",
                                             "wrap": true,
                                             "size": "Large",
                                             "spacing": "Small",
@@ -131,7 +131,7 @@ module.exports = function (controller) {
                         },
                         {
                             "type": "TextBlock",
-                            "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-cyborg) on GitHub",
+                            "text": "[Source Code](https://github.com/xanderstevenson/devnet-support-helper) on GitHub",
                             "wrap": true,
                             "horizontalAlignment": "Center"
                         },
