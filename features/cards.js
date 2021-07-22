@@ -144,9 +144,6 @@ module.exports = function (controller) {
                         }
                     ],
                     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                    "backgroundImage": {
-                        "url": "http://www.hdwallpaperspulse.com/wp-content/uploads/2016/03/10/abstract-free-background-hd.jpeg"
-                    }
                 }
             }]
         })
