@@ -16,7 +16,7 @@
     "botkit": "^4.6.2",
     "botkit-plugin-cms": "^1.0.3",
     "dotenv": "^8.6.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ngrok": "^4.0.1",
     "node": "^16.3.0",
     "redis": "^3.1.1",
